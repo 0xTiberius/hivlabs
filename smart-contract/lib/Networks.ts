@@ -58,3 +58,13 @@ export const polygonMainnet: NetworkConfigInterface = {
     generateTransactionUrl: (transactionAddress: string) => `https://polygonscan.com/tx/${transactionAddress}`,
   },
 }
+
+export const fuseMainnet: NetworkConfigInterface = {
+  chainId: 122,
+  symbol: 'FUSE',
+  blockExplorer: {
+    name: 'Polygonscan',
+    generateContractUrl: (contractAddress: string) => `https://explorer.fuse.io/address/${contractAddress}`,
+    generateTransactionUrl: (transactionAddress: string) => `https://explorer.fuse.io/tx/${transactionAddress}`,
+  },
+}

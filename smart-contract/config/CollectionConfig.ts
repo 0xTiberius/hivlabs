@@ -2,32 +2,33 @@ import CollectionConfigInterface from '../lib/CollectionConfigInterface';
 import * as Networks from '../lib/Networks';
 import * as Marketplaces from '../lib/Marketplaces';
 import whitelistAddresses from './whitelist.json';
+import { network } from 'hardhat';
 
 const CollectionConfig: CollectionConfigInterface = {
   testnet: Networks.hardhatLocal,
-  mainnet: Networks.ethereumMainnet,
+  mainnet: Networks.fuseMainnet,
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: 'YourNftToken',
-  tokenName: 'My NFT Token',
-  tokenSymbol: 'MNT',
-  hiddenMetadataUri: 'ipfs://__CID__/hidden.json',
-  maxSupply: 10000,
+  contractName: 'ASCIIDegens',
+  tokenName: 'ASCII-Degen',
+  tokenSymbol: 'ASCIID',
+  hiddenMetadataUri: 'ipfs://bafybeia77yi3ps46t3iln2jz47l4ruesv2fl7xyi24iio2gmzdbmao6bve/hidden.json',
+  maxSupply: 111,
   whitelistSale: {
-    price: 0.05,
-    maxMintAmountPerTx: 1,
+    price: 90.00,
+    maxMintAmountPerTx: 11,
   },
   preSale: {
-    price: 0.07,
-    maxMintAmountPerTx: 2,
+    price: 90.00,
+    maxMintAmountPerTx: 11,
   },
   publicSale: {
-    price: 0.09,
-    maxMintAmountPerTx: 5,
+    price: 90.00,
+    maxMintAmountPerTx: 11,
   },
-  contractAddress: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
-  marketplaceIdentifier: 'my-nft-token',
+  contractAddress: '0x9cf22A48fE514a8FA0478322C9Ef92AC1E2D3C98',
+  marketplaceIdentifier: 'ASCII-Crosschain-Degens',
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };
